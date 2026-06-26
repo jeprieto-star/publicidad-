@@ -294,15 +294,38 @@ def foto_candidato(x, y, w, h, candidato, mostrar_rol=True, r_borde=18):
     return "".join(s)
 
 
-def placa_nombre(cx, y, ancho, nombre, rol, alto=92, size_nombre=44):
-    """Placa con el nombre del candidato y su rol (el nombre se autoajusta)."""
+def nombre_lineas(nombre):
+    """Divide un nombre largo en dos líneas balanceadas por palabras."""
+    palabras = nombre.split()
+    if len(palabras) <= 1 or len(nombre) <= 15:
+        return [nombre]
+    # punto de corte que mejor balancea la longitud de ambas líneas
+    mejor_i, mejor_dif = 1, 10**9
+    for i in range(1, len(palabras)):
+        a = len(" ".join(palabras[:i]))
+        b = len(" ".join(palabras[i:]))
+        if abs(a - b) < mejor_dif:
+            mejor_dif, mejor_i = abs(a - b), i
+    return [" ".join(palabras[:mejor_i]), " ".join(palabras[mejor_i:])]
+
+
+def placa_nombre(cx, y, ancho, nombre, rol, alto=118, size_nombre=46):
+    """Placa con el nombre (1 o 2 líneas, autoajustado) y el rol debajo."""
     x = cx - ancho / 2
-    size_n = ajustar_size(nombre, ancho * 0.88, size_nombre, factor=0.62)
+    lineas = nombre_lineas(nombre)
     s = [f'<g filter="url(#sombraSuave)">']
-    s.append(f'<rect x="{x}" y="{y}" width="{ancho}" height="{alto}" rx="{alto*0.18:.0f}" fill="url(#gVerde)"/>')
-    s.append(f'<rect x="{x}" y="{y}" width="{ancho}" height="{alto*0.30:.0f}" rx="{alto*0.18:.0f}" fill="#FFFFFF" opacity="0.12"/>')
-    s.append(texto(cx, y + alto*0.50, nombre, size_n, fill=C.BLANCO, peso_extra=0.05))
-    s.append(texto(cx, y + alto*0.85, rol, size_nombre*0.42, fill=C.AMARILLO_CL, peso_extra=0.04, spacing=size_nombre*0.06))
+    s.append(f'<rect x="{x}" y="{y}" width="{ancho}" height="{alto}" rx="{alto*0.16:.0f}" fill="url(#gVerde)"/>')
+    s.append(f'<rect x="{x}" y="{y}" width="{ancho}" height="{alto*0.26:.0f}" rx="{alto*0.16:.0f}" fill="#FFFFFF" opacity="0.12"/>')
+    if len(lineas) == 1:
+        sn = ajustar_size(lineas[0], ancho * 0.90, min(size_nombre, alto * 0.46), factor=0.60)
+        s.append(texto(cx, y + alto * 0.50, lineas[0], sn, fill=C.BLANCO, peso_extra=0.05))
+        s.append(texto(cx, y + alto * 0.84, rol, alto * 0.18, fill=C.AMARILLO_CL, peso_extra=0.04, spacing=alto * 0.05))
+    else:
+        ancho_ref = max(lineas, key=len)
+        sn = ajustar_size(ancho_ref, ancho * 0.90, min(size_nombre, alto * 0.32), factor=0.60)
+        s.append(texto(cx, y + alto * 0.34, lineas[0], sn, fill=C.BLANCO, peso_extra=0.05))
+        s.append(texto(cx, y + alto * 0.60, lineas[1], sn, fill=C.BLANCO, peso_extra=0.05))
+        s.append(texto(cx, y + alto * 0.87, rol, alto * 0.155, fill=C.AMARILLO_CL, peso_extra=0.04, spacing=alto * 0.045))
     s.append('</g>')
     return "".join(s)
 

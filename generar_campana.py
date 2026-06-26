@@ -33,11 +33,10 @@ PIEZAS = [
 
 
 def main():
-    # fotos placeholder (solo si no existen las reales)
-    R.generar_placeholder_foto(os.path.join(BASE, "assets", "candidato-1.png"),
-                               "FOTO CANDIDATO PRINCIPAL")
-    R.generar_placeholder_foto(os.path.join(BASE, "assets", "candidato-2.png"),
-                               "FOTO CANDIDATO SUPLENTE")
+    # fotos placeholder (solo si falta la foto real de algún candidato)
+    for i, cand in enumerate(C.CANDIDATOS, start=1):
+        ruta = cand["foto"] if os.path.isabs(cand["foto"]) else os.path.join(BASE, cand["foto"])
+        R.generar_placeholder_foto(ruta, f"FOTO {cand['rol']}")
 
     print("Generando piezas de la campaña Plancha N.º", C.PLANCHA)
     for nombre, fn, escala in PIEZAS:

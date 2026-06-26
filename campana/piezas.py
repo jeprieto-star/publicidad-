@@ -145,20 +145,20 @@ def valla():
     fy, fh, fw = 150, 470, 360
     s.append(G.foto_candidato(120, fy, fw, fh, C.CANDIDATOS[0]))
     s.append(G.foto_candidato(120 + fw + 40, fy, fw, fh, C.CANDIDATOS[1]))
-    s.append(G.placa_nombre(120 + fw/2, fy + fh + 16, fw, C.CANDIDATOS[0]["nombre"], "PRINCIPAL", alto=78, size_nombre=36))
-    s.append(G.placa_nombre(120 + fw + 40 + fw/2, fy + fh + 16, fw, C.CANDIDATOS[1]["nombre"], "SUPLENTE", alto=78, size_nombre=36))
+    s.append(G.placa_nombre(120 + fw/2, fy + fh + 16, fw, C.CANDIDATOS[0]["nombre"], "PRINCIPAL", alto=106, size_nombre=40))
+    s.append(G.placa_nombre(120 + fw + 40 + fw/2, fy + fh + 16, fw, C.CANDIDATOS[1]["nombre"], "SUPLENTE", alto=106, size_nombre=40))
 
     # lema (autoajustado al espacio entre fotos y sello)
-    lx = 960
-    lema_w = 940
-    s1 = G.ajustar_size("COMPROMETIDOS", lema_w, 124, factor=0.62)
-    s2 = G.ajustar_size("CON LOS CAFETEROS", lema_w, 104, factor=0.62)
+    lx = 955
+    lema_w = 950
+    s1 = G.ajustar_size("COMPROMETIDOS", lema_w, 124, factor=0.70)
+    s2 = G.ajustar_size("CON LOS CAFETEROS", lema_w, 104, factor=0.70)
     s.append(G.texto(lx, 250, "COMPROMETIDOS", s1, fill=C.VERDE_OSC, peso_extra=0.06, anchor="start"))
     s.append(G.texto(lx, 366, "CON LOS CAFETEROS", s2, fill=C.CAFE_OSC, peso_extra=0.06, anchor="start"))
     s.append(G.texto(lx + 4, 440, C.SUBLEMA, 52, fill=C.ROJO, peso_extra=0.04, anchor="start", italic=True))
 
     # sello plancha grande
-    s.append(G.sello_plancha_grande(2130, 295, 192))
+    s.append(G.sello_plancha_grande(2155, 295, 182))
 
     # banda inferior: municipios + llamado
     s.append(f'<rect x="{lx-4}" y="528" width="940" height="92" rx="46" fill="url(#gRojo)" filter="url(#sombra)"/>')
@@ -217,13 +217,16 @@ def tarjeta():
     s.append(G.texto(W/2, 50, C.CORPORACION.upper(), 19, fill=C.CAFE, peso_extra=0.04, spacing=1))
 
     # zona izquierda: fotos + nombres
-    cx1, cx2, cy, r = 170, 398, 290, 86
+    cx1, cx2, cy, r = 170, 398, 280, 84
     s.append(G.foto_circular(cx1, cy, r, C.CANDIDATOS[0]))
     s.append(G.foto_circular(cx2, cy, r, C.CANDIDATOS[1]))
     for cxn, cand in ((cx1, C.CANDIDATOS[0]), (cx2, C.CANDIDATOS[1])):
-        sn = G.ajustar_size(cand["nombre"], 214, 22, factor=0.64)
-        s.append(G.texto(cxn, cy + r + 40, cand["nombre"], sn, fill=C.NEGRO, peso_extra=0.04))
-        s.append(G.texto(cxn, cy + r + 70, cand["rol"], 16, fill=C.ROJO_OSC, peso_extra=0.03, spacing=1))
+        lineas = G.nombre_lineas(cand["nombre"])
+        sn = G.ajustar_size(max(lineas, key=len), 220, 21, factor=0.60)
+        yb = cy + r + 36
+        for j, ln in enumerate(lineas[:2]):
+            s.append(G.texto(cxn, yb + j * (sn + 4), ln, sn, fill=C.NEGRO, peso_extra=0.04))
+        s.append(G.texto(cxn, yb + len(lineas[:2]) * (sn + 4) + 12, cand["rol"], 15, fill=C.ROJO_OSC, peso_extra=0.03, spacing=1))
 
     # zona derecha: lema + plancha + región
     cxd = 770
@@ -289,8 +292,8 @@ def historia_ig():
 
     s.append(G.foto_circular(330, 700, 190, C.CANDIDATOS[0]))
     s.append(G.foto_circular(750, 700, 190, C.CANDIDATOS[1]))
-    s.append(G.placa_nombre(330, 910, 360, C.CANDIDATOS[0]["nombre"], "PRINCIPAL", alto=80, size_nombre=34))
-    s.append(G.placa_nombre(750, 910, 360, C.CANDIDATOS[1]["nombre"], "SUPLENTE", alto=80, size_nombre=34))
+    s.append(G.placa_nombre(330, 905, 380, C.CANDIDATOS[0]["nombre"], "PRINCIPAL", alto=104, size_nombre=38))
+    s.append(G.placa_nombre(750, 905, 380, C.CANDIDATOS[1]["nombre"], "SUPLENTE", alto=104, size_nombre=38))
 
     # propuestas
     top0 = 1060

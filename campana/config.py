@@ -28,14 +28,14 @@ MUNICIPIOS = ["Líbano", "Villahermosa", "Casabianca"]
 # ----------------------------------------------------------------------
 CANDIDATOS = [
     {
-        "nombre": "NOMBRE CANDIDATO PRINCIPAL",
+        "nombre": "Jhon Esneider Prieto Prieto",
         "rol": "PRINCIPAL",
-        "foto": "assets/candidato-1.png",   # reemplazar por la foto real
+        "foto": "assets/jhon-esneider-prieto.jpg",
     },
     {
-        "nombre": "NOMBRE CANDIDATO SUPLENTE",
+        "nombre": "Nelson Ferned Orozco Castaño",
         "rol": "SUPLENTE",
-        "foto": "assets/candidato-2.png",   # reemplazar por la foto real
+        "foto": "assets/nelson-ferned-orozco.jpg",
     },
 ]
 
