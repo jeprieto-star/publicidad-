@@ -84,9 +84,12 @@ publicidad-/
 
 ---
 
-## ✅ Pendiente para finalizar
+## ✅ Estado de la campaña
 
-- [ ] Subir las **fotos reales** de los dos candidatos a `assets/`.
-- [ ] Escribir los **nombres reales** en `campana/config.py`.
-- [ ] Confirmar quién es **principal** y quién **suplente**.
-- [ ] Ejecutar `python generar_campana.py` y enviar a imprenta los PDF.
+- [x] **Fotos reales** de los dos candidatos integradas (`assets/recortes/`).
+- [x] **Nombres reales** en `campana/config.py`:
+  - **Principal:** Jhon Esneider Prieto Prieto
+  - **Suplente:** Nelson Ferned Orozco Castaño
+- [x] **Identidad regional** (Líbano · Casabianca · Villahermosa · Norte del Tolima) presente en todas las piezas.
+- [x] Kit completo generado en **SVG / PNG / PDF** (carpeta `salida/`).
+- [ ] Revisar los PDF y enviarlos a imprenta.

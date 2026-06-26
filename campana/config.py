@@ -20,6 +20,14 @@ SUBLEMA = "Por unos cafeteros prósperos"
 LLAMADO = "VOTA PLANCHA"
 
 # ----------------------------------------------------------------------
+# REGIÓN / ZONA CAFETERA  (norte del Tolima)
+# ----------------------------------------------------------------------
+REGION = "Norte del Tolima"
+MUNICIPIOS = ["Líbano", "Casabianca", "Villahermosa"]
+MUNICIPIOS_TXT = "Líbano · Casabianca · Villahermosa"
+REGION_LINEA = "Líbano · Casabianca · Villahermosa · Norte del Tolima"
+
+# ----------------------------------------------------------------------
 # CANDIDATOS
 #   foto     -> foto original (con fondo azul de estudio)
 #   recorte  -> foto con el fondo removido (PNG transparente)

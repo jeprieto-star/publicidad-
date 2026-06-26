@@ -9,14 +9,16 @@ Reglas de diseño:
   - El texto vive en paneles de color sólido adyacentes, o sobre la foto con
     una sombra de texto (nunca con un tinte que cubra la imagen).
   - Paleta sobria (verde bosque, crema, oro apagado, terracota), aire y
-    jerarquía tipográfica. Sin nombres de municipios (campaña de todo el Tolima).
+    jerarquía tipográfica.
+  - Identidad regional explícita: la campaña pertenece al norte del Tolima
+    (Líbano · Casabianca · Villahermosa), presente en cabeceras y pies.
 """
 from . import config as C
 from . import grafismos as G
 
 LEMA1 = "COMPROMETIDOS"
 LEMA2 = "CON LOS CAFETEROS"
-TAGLINE = "Por el campo cafetero del Tolima"
+TAGLINE = "Por el campo cafetero de Líbano, Casabianca y Villahermosa"
 
 
 # ----------------------------------------------------------------------
@@ -24,10 +26,10 @@ TAGLINE = "Por el campo cafetero del Tolima"
 # ----------------------------------------------------------------------
 def _cabecera(s, W, h=94):
     s.append(G.panel(0, 0, W, h, "url(#gVerdeH)"))
-    s.append(G.texto(W/2, h*0.46, C.CORPORACION, h*0.205, fill=C.HUESO,
+    s.append(G.texto(W/2, h*0.44, C.CORPORACION, h*0.195, fill=C.HUESO,
                      peso_extra=0.015, spacing=1.5, upper=True))
-    s.append(G.texto(W/2, h*0.80, f"PLANCHA N.º {C.PLANCHA}  ·  ELECCIONES CAFETERAS",
-                     h*0.15, fill=C.ORO_CL, spacing=2, upper=True))
+    s.append(G.texto(W/2, h*0.78, C.REGION_LINEA, h*0.145, fill=C.ORO_CL,
+                     spacing=1.2, upper=True))
     s.append(G.regla_tricolor(W/2 - h*1.0, h - 7, h*2.0, h=5, gap=6))
 
 
@@ -134,6 +136,8 @@ def pasacalle():
     s.append(G.texto(cxm, 350, LEMA2, 70, fill=C.TERRACOTA, peso_extra=0.02))
     s.append(G.filete(cxm-180, 384, cxm+180, 384, color=C.ORO, w=3))
     s.append(G.texto(cxm, 428, C.SUBLEMA, 30, fill=C.CAFE, italic=True))
+    s.append(G.texto(cxm, 470, C.REGION_LINEA, 23, fill=C.VERDE, peso_extra=0.02,
+                     spacing=1.2, upper=True))
 
     # zona derecha: sello de plancha
     s.append(G.panel(1660, 0, W-1660, H, "url(#gVerde)"))
@@ -175,6 +179,8 @@ def valla():
     s2 = G.ajustar_size(LEMA2, lema_w, 110, factor=0.64)
     s.append(G.texto(lx, 150, C.CORPORACION, 34, fill=C.HUESO, peso_extra=0.02,
                      anchor="start", spacing=1.5, sombra=True, upper=True))
+    s.append(G.texto(lx, 206, C.REGION_LINEA, 30, fill=C.ORO_CL, peso_extra=0.02,
+                     anchor="start", spacing=1.2, sombra=True, upper=True))
     s.append(G.texto(lx, 312, LEMA1, s1, fill=C.HUESO, peso_extra=0.03, anchor="start", sombra=True))
     s.append(G.texto(lx, 312 + s1*0.94, LEMA2, s2, fill=C.ORO_CL, peso_extra=0.03, anchor="start", sombra=True))
     s.append(G.texto(lx + 4, 312 + s1*0.94 + s2*0.66, C.SUBLEMA, 46, fill=C.HUESO,
@@ -267,7 +273,8 @@ def tarjeta():
     s.append(G.sello_plancha(622, 410, 74, tono="terra"))
     s.append(G.texto(726, 392, C.LLAMADO, 30, fill=C.TERRA_OSC, peso_extra=0.02, anchor="start", spacing=1))
     s.append(G.texto(726, 446, "N.º " + C.PLANCHA, 50, fill=C.VERDE_OSC, peso_extra=0.02, anchor="start"))
-    s.append(G.texto(cxd, 548, TAGLINE, 21, fill=C.VERDE_OSC, peso_extra=0.02))
+    st = G.ajustar_size(TAGLINE, 580, 21, factor=0.52)
+    s.append(G.texto(cxd, 548, TAGLINE, st, fill=C.VERDE_OSC, peso_extra=0.02))
     return W, H, "".join(s), "url(#gCrema)"
 
 
@@ -284,6 +291,8 @@ def post_ig():
     s.append(G.foto(0, 0, W, fh, C.F_MONTANA, pos="xMidYMid", fade=("fadeArriba",)))
     s.append(G.texto(W/2, 70, C.CORPORACION, 24, fill=C.HUESO, peso_extra=0.02,
                      spacing=1.5, sombra=True, upper=True))
+    s.append(G.texto(W/2, 110, C.REGION_LINEA, 22, fill=C.ORO_CL, peso_extra=0.02,
+                     spacing=1.2, sombra=True, upper=True))
     s.append(G.texto(W/2, 196, LEMA1, 94, fill=C.HUESO, peso_extra=0.03, sombra=True))
     s.append(G.texto(W/2, 278, LEMA2, 66, fill=C.ORO_CL, peso_extra=0.03, sombra=True))
     s.append(G.regla_tricolor(0, fh-6, W, h=6))
@@ -312,6 +321,8 @@ def historia_ig():
     s.append(G.foto(0, 0, W, fh, C.F_VALLE, pos="xMidYMid", fade=("fadeArriba",)))
     s.append(G.texto(W/2, 120, C.CORPORACION, 26, fill=C.HUESO, peso_extra=0.02,
                      spacing=2, sombra=True, upper=True))
+    s.append(G.texto(W/2, 168, C.REGION_LINEA, 25, fill=C.ORO_CL, peso_extra=0.02,
+                     spacing=1.3, sombra=True, upper=True))
     s.append(G.texto(W/2, 290, LEMA1, 104, fill=C.HUESO, peso_extra=0.03, sombra=True))
     s.append(G.texto(W/2, 380, LEMA2, 74, fill=C.ORO_CL, peso_extra=0.03, sombra=True))
     s.append(G.texto(W/2, 444, C.SUBLEMA, 38, fill=C.HUESO, italic=True, sombra=True))
