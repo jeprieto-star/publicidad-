@@ -93,3 +93,64 @@ publicidad-/
 - [x] **Identidad regional** (Líbano · Casabianca · Villahermosa · Norte del Tolima) presente en todas las piezas.
 - [x] Kit completo generado en **SVG / PNG / PDF** (carpeta `salida/`).
 - [ ] Revisar los PDF y enviarlos a imprenta.
+
+
+---
+
+# ☕ PROPUESTA NUEVA (v2) — *Tierra de Café · Norte del Tolima*
+
+Rediseño **completo y desde cero**, con una dirección de arte totalmente
+distinta a la versión anterior:
+
+- **Estilo cálido y de impacto** (no el verde editorial sobrio anterior):
+  paleta **cereza de café + espresso + crema + ámbar**.
+- **Tipografía de cartel**: Anton (titulares), Oswald (rótulos),
+  Fraunces (acentos), Noto Sans (cuerpo).
+- **Fotografía real de la región como protagonista**: la **iglesia de Líbano**,
+  los **cafetales**, la **recolección**, el **grano de café** y el **Nevado**.
+- **Sistema de marca propio**: sello/insignia con el número **2**, grano de
+  café estilizado y líneas topográficas de la cordillera.
+- **Sitio web interactivo** para compartir por WhatsApp/redes.
+
+## Piezas (carpeta `salida_v2/` — SVG · PNG · PDF)
+
+| # | Pieza |
+|---|-------|
+| 01 | Afiche principal |
+| 02 | Afiche de propuestas |
+| 03 | Pasacalle |
+| 04 | Valla |
+| 05 | Volante |
+| 06 | Tarjeta |
+| 07 | Post para redes (1080×1080) |
+| 08 | Historia / estado (1080×1920) |
+| 09 | **Sello / logotipo** de campaña (suelto) |
+
+➕ **Sitio web:** `sitio/index.html` (landing one-page lista para GitHub Pages).
+
+## Cómo regenerar la propuesta v2
+
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+bash instalar_fuentes.sh      # instala Anton / Oswald / Fraunces (una vez)
+python generar_v2.py          # genera todo en salida_v2/
+```
+
+> Todo lo editable (nombres, propuestas, colores, fotos) vive en
+> `estudio/marca.py`. La lógica gráfica está en `estudio/svg.py` y el armado
+> de cada pieza en `estudio/piezas.py`.
+
+## Estructura de la propuesta v2
+
+```
+estudio/
+├── marca.py     # ← datos, paleta y tipografía (TODO lo editable)
+├── svg.py       # componentes: foto, sello, grano, topografía, iconos…
+├── piezas.py    # definición de cada pieza
+└── render.py    # exportación SVG / PNG / PDF
+assets_v2/region/ # fotos reales de la región (Líbano, cafetales, nevado…)
+generar_v2.py     # punto de entrada
+sitio/index.html  # micrositio interactivo de campaña
+salida_v2/        # svg/ · png/ · pdf/
+```

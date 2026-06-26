@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="900" height="900" viewBox="0 0 900 900">
+
+<defs>
+  <linearGradient id="gCrema" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FCF9F2"/><stop offset="1" stop-color="#ECDCC1"/>
+  </linearGradient>
+  <linearGradient id="gEspresso" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3A2017"/><stop offset="1" stop-color="#241310"/>
+  </linearGradient>
+  <linearGradient id="gCereza" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#E0573C"/><stop offset="1" stop-color="#9C2614"/>
+  </linearGradient>
+  <linearGradient id="gAmbar" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#E7A12B"/><stop offset="1" stop-color="#F6C45A"/>
+  </linearGradient>
+  <!-- velos para apoyar texto sobre foto -->
+  <linearGradient id="velAbajo" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#241310" stop-opacity="0"/>
+    <stop offset="0.45" stop-color="#241310" stop-opacity="0.05"/>
+    <stop offset="1" stop-color="#241310" stop-opacity="0.92"/>
+  </linearGradient>
+  <linearGradient id="velArriba" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#241310" stop-opacity="0.85"/>
+    <stop offset="0.5" stop-color="#241310" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="velIzq" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#241310" stop-opacity="0.9"/>
+    <stop offset="0.7" stop-color="#241310" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="velCereza" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#9C2614" stop-opacity="0"/>
+    <stop offset="1" stop-color="#9C2614" stop-opacity="0.92"/>
+  </linearGradient>
+
+  <filter id="sh_card" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="14" stdDeviation="26" flood-color="#1A0F0A" flood-opacity="0.34"/>
+  </filter>
+  <filter id="sh_soft" x="-40%" y="-40%" width="180%" height="180%">
+    <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#1A0F0A" flood-opacity="0.25"/>
+  </filter>
+  <filter id="sh_txt" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#1A0F0A" flood-opacity="0.55"/>
+  </filter>
+  <filter id="grano">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0"/>
+  </filter>
+</defs>
+
+  <rect x="0" y="0" width="900" height="900" fill="none"/>
+<g filter="url(#sh_card)"><circle cx="450.0" cy="450.0" r="360" fill="url(#gCereza)"/></g><circle cx="450.0" cy="450.0" r="324" fill="none" stroke="#E7A12B" stroke-width="10"/><circle cx="450.0" cy="450.0" r="295" fill="none" stroke="#E7A12B" stroke-width="3" opacity="0.55"/><defs><path id="arcUp" d="M191,450.0 A259,259 0 0 1 709,450.0"/><path id="arcDn" d="M191,450.0 A259,259 0 0 0 709,450.0"/></defs><text font-family="Oswald" font-weight="600" font-size="39" fill="#F6C45A" letter-spacing="2.5"><textPath href="#arcUp" startOffset="50%" text-anchor="middle">COMPROMETIDOS CON LOS CAFETEROS</textPath></text><text font-family="Oswald" font-weight="600" font-size="40" fill="#F6C45A" letter-spacing="6"><textPath href="#arcDn" startOffset="50%" text-anchor="middle">NORTE DEL TOLIMA</textPath></text><text x="450.0" y="300.0" font-family="Oswald" font-size="50" font-weight="600" fill="#FCF9F2" text-anchor="middle" opacity="1.0" letter-spacing="10">PLANCHA</text><g transform="translate(272.0,484.0) rotate(20)"><ellipse cx="0" cy="0" rx="22.4" ry="34.0" fill="#241310"/><path d="M0,-29.2 C 10.2,-13.6 -10.2,13.6 0,29.2" fill="none" stroke="#F7EFE0" stroke-width="4.8" stroke-linecap="round" opacity="0.85"/></g><g transform="translate(628.0,484.0) rotate(-20)"><ellipse cx="0" cy="0" rx="22.4" ry="34.0" fill="#241310"/><path d="M0,-29.2 C 10.2,-13.6 -10.2,13.6 0,29.2" fill="none" stroke="#F7EFE0" stroke-width="4.8" stroke-linecap="round" opacity="0.85"/></g><text x="450.0" y="598.0" font-family="Anton" font-size="300" font-weight="400" fill="#FCF9F2" text-anchor="middle" opacity="1.0">2</text>
+</svg>

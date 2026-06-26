@@ -16,3 +16,8 @@ package-lock.json
 .DS_Store
 Thumbs.db
 _work/
+
+
+# Fuentes descargadas y archivos temporales de la propuesta v2
+_fonts/
+*.jfif

@@ -1,1 +1,5 @@
 cairosvg>=2.7
+pillow>=10.0
+# Solo para reinstalar las fuentes de cartel (instalar_fuentes.sh)
+fonttools>=4.40
+brotli>=1.1

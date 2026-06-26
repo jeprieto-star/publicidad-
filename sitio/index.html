@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plancha N.º 2 · Comprometidos con los Cafeteros — Norte del Tolima</title>
+<meta name="description" content="Jhon Esneider Prieto y Nelson Ferned Orozco — Plancha N.º 2 al Comité Departamental de Cafeteros del Tolima. Líbano, Casabianca y Villahermosa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@1,9..144,500&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --espresso:#241310; --espresso2:#3A2017; --cereza:#C5341E; --cereza-osc:#9C2614;
+    --cereza-cl:#E0573C; --ambar:#E7A12B; --ambar-cl:#F6C45A; --crema:#F7EFE0;
+    --crema-osc:#ECDCC1; --hueso:#FCF9F2; --verde:#2F5233; --tinta:#2A1A12;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Noto Sans',system-ui,sans-serif;color:var(--tinta);background:var(--crema);line-height:1.55}
+  .display{font-family:'Anton',Impact,sans-serif;letter-spacing:.5px;line-height:.96}
+  .cond{font-family:'Oswald',sans-serif}
+  .serif{font-family:'Fraunces',Georgia,serif;font-style:italic}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* ---------- HERO ---------- */
+  header.hero{position:relative;color:var(--hueso);text-align:center;overflow:hidden;
+    background:linear-gradient(180deg,rgba(36,19,16,.55),rgba(36,19,16,.92)),
+      url('../assets_v2/region/cafetales.jpg') center/cover}
+  .topbar{background:var(--espresso);padding:12px 0;border-bottom:3px solid var(--ambar)}
+  .topbar p{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+    font-size:clamp(11px,2.6vw,16px);color:var(--ambar-cl)}
+  .hero-in{padding:54px 22px 70px}
+  .badge{width:clamp(120px,30vw,180px);margin:0 auto 22px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.4))}
+  .hero h1{font-size:clamp(46px,12vw,128px)}
+  .hero h1 .rojo{color:var(--cereza-cl)}
+  .hero .lema2{font-size:clamp(30px,8vw,86px);color:var(--ambar-cl)}
+  .hero .promesa{font-size:clamp(20px,4.6vw,34px);margin-top:14px;color:var(--hueso)}
+  .region{margin-top:18px;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:1.5px;
+    text-transform:uppercase;color:var(--ambar-cl);font-size:clamp(13px,3vw,20px)}
+  .cta-btn{display:inline-block;margin-top:26px;background:var(--cereza);color:var(--hueso);
+    font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+    padding:16px 38px;border-radius:50px;text-decoration:none;font-size:clamp(15px,3.4vw,20px);
+    box-shadow:0 10px 26px rgba(156,38,20,.5);transition:transform .15s}
+  .cta-btn:hover{transform:translateY(-3px)}
+
+  /* ---------- CANDIDATOS ---------- */
+  section{padding:64px 0}
+  .kicker{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:4px;text-transform:uppercase;
+    color:var(--cereza);text-align:center;font-size:clamp(13px,3vw,17px)}
+  h2.sec{font-family:'Anton',sans-serif;text-align:center;color:var(--espresso);
+    font-size:clamp(38px,9vw,84px);margin:6px 0 10px}
+  .rule{width:120px;height:6px;background:var(--ambar);border-radius:4px;margin:0 auto 40px}
+  .cands{display:flex;gap:30px;justify-content:center;flex-wrap:wrap}
+  .cand{flex:1 1 300px;max-width:360px;text-align:center}
+  .cand .ph{width:230px;height:230px;margin:0 auto 16px;border-radius:50%;overflow:hidden;
+    border:8px solid var(--ambar);background:var(--espresso);box-shadow:0 14px 30px rgba(0,0,0,.3)}
+  .cand .ph img{width:100%;height:100%;object-fit:cover;object-position:center top}
+  .cand h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(24px,5vw,32px);color:var(--espresso)}
+  .pill{display:inline-block;margin-top:8px;background:var(--cereza);color:var(--hueso);
+    font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+    padding:6px 22px;border-radius:30px;font-size:14px}
+
+  /* ---------- PROPUESTAS ---------- */
+  .props-bg{background:var(--espresso);color:var(--hueso)}
+  .props-bg h2.sec{color:var(--hueso)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:18px}
+  .prop{background:rgba(255,255,255,.05);border:1px solid rgba(231,161,43,.25);border-radius:18px;
+    padding:26px 24px;position:relative;overflow:hidden}
+  .prop .num{font-family:'Anton',sans-serif;font-size:64px;color:var(--cereza);opacity:.5;line-height:.8}
+  .prop h4{font-family:'Oswald',sans-serif;font-weight:600;font-size:23px;color:var(--ambar-cl);margin:6px 0 8px}
+  .prop p{color:#e9ddca;font-size:15.5px}
+
+  /* ---------- REGIÓN ---------- */
+  .region-sec{text-align:center}
+  .muns{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+  .mun{background:var(--crema-osc);border-radius:14px;padding:14px 26px;font-family:'Oswald',sans-serif;
+    font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--espresso)}
+  .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:30px}
+  .gal img{border-radius:14px;height:180px;object-fit:cover;width:100%;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+
+  /* ---------- KIT / DESCARGAS ---------- */
+  .kit-bg{background:var(--crema-osc)}
+  .piezas{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:18px}
+  .pieza{background:var(--hueso);border-radius:16px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.12);
+    transition:transform .15s}
+  .pieza:hover{transform:translateY(-4px)}
+  .pieza img{width:100%;height:200px;object-fit:cover;object-position:top}
+  .pieza span{display:block;padding:12px 14px;font-family:'Oswald',sans-serif;font-weight:600;
+    text-transform:uppercase;letter-spacing:1px;font-size:14px;color:var(--espresso)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--espresso);color:var(--hueso);text-align:center;padding:48px 22px}
+  footer .display{font-size:clamp(30px,7vw,60px)}
+  footer .rojo{color:var(--cereza-cl)}
+  footer .vote{margin-top:18px;font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:3px;
+    text-transform:uppercase;color:var(--ambar-cl);font-size:clamp(18px,4vw,26px)}
+  footer small{display:block;margin-top:24px;color:#b89a86;letter-spacing:1px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="topbar"><p>Comité Departamental de Cafeteros del Tolima</p></div>
+  <div class="hero-in">
+    <img class="badge" src="../salida_v2/png/09-sello-marca.png" alt="Sello Plancha 2">
+    <h1 class="display"><span class="rojo">COMPROMETIDOS</span></h1>
+    <h1 class="display lema2">CON LOS CAFETEROS</h1>
+    <p class="promesa serif">Por unos cafeteros prósperos</p>
+    <p class="region">Líbano · Casabianca · Villahermosa · Norte del Tolima</p>
+    <a class="cta-btn" href="#propuestas">Conoce nuestras propuestas</a>
+  </div>
+</header>
+
+<!-- CANDIDATOS -->
+<section>
+  <div class="wrap">
+    <p class="kicker">Plancha N.º 2</p>
+    <h2 class="sec">Nuestros candidatos</h2>
+    <div class="rule"></div>
+    <div class="cands">
+      <div class="cand">
+        <div class="ph"><img src="../assets/recortes/jhon-esneider-prieto.png" alt="Jhon Esneider Prieto Prieto"></div>
+        <h3>Jhon Esneider Prieto Prieto</h3>
+        <span class="pill">Principal</span>
+      </div>
+      <div class="cand">
+        <div class="ph"><img src="../assets/recortes/nelson-ferned-orozco.png" alt="Nelson Ferned Orozco Castaño"></div>
+        <h3>Nelson Ferned Orozco Castaño</h3>
+        <span class="pill">Suplente</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPUESTAS -->
+<section id="propuestas" class="props-bg">
+  <div class="wrap">
+    <p class="kicker" style="color:var(--ambar-cl)">Lo que vamos a defender</p>
+    <h2 class="sec">Nuestras propuestas</h2>
+    <div class="rule"></div>
+    <div class="grid">
+      <div class="prop"><div class="num">1</div><h4>Vías para la cosecha</h4><p>Buenas vías de comunicación para sacar el café de la montaña.</p></div>
+      <div class="prop"><div class="num">2</div><h4>Renovación de café</h4><p>Buenos incentivos por la renovación de los cafetales.</p></div>
+      <div class="prop"><div class="num">3</div><h4>Beneficiaderos</h4><p>Mejoramiento y construcción de beneficiaderos.</p></div>
+      <div class="prop"><div class="num">4</div><h4>Mujer cafetera</h4><p>Proyectos productivos para las mujeres del campo.</p></div>
+      <div class="prop"><div class="num">5</div><h4>Defensoría cafetera</h4><p>Defensa de los derechos del caficultor de la región.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REGIÓN -->
+<section class="region-sec">
+  <div class="wrap">
+    <p class="kicker">Nuestra tierra</p>
+    <h2 class="sec">Norte del Tolima</h2>
+    <div class="rule"></div>
+    <div class="muns"><span class="mun">Líbano</span><span class="mun">Casabianca</span><span class="mun">Villahermosa</span></div>
+    <div class="gal">
+      <img src="../assets_v2/region/libano-iglesia.jpg" alt="Iglesia de Líbano">
+      <img src="../assets_v2/region/cafetales.jpg" alt="Cafetales">
+      <img src="../assets_v2/region/recoleccion.jpg" alt="Recolección de café">
+      <img src="../assets_v2/region/cafe.jpg" alt="Cereza de café">
+      <img src="../assets_v2/region/nevado.jpg" alt="Nevado">
+    </div>
+  </div>
+</section>
+
+<!-- KIT -->
+<section class="kit-bg">
+  <div class="wrap">
+    <p class="kicker">Material de campaña</p>
+    <h2 class="sec">Comparte la plancha</h2>
+    <div class="rule"></div>
+    <div class="piezas">
+      <a class="pieza" href="../salida_v2/png/01-afiche-principal.png"><img src="../salida_v2/png/01-afiche-principal.png" alt=""><span>Afiche principal</span></a>
+      <a class="pieza" href="../salida_v2/png/02-afiche-propuestas.png"><img src="../salida_v2/png/02-afiche-propuestas.png" alt=""><span>Afiche de propuestas</span></a>
+      <a class="pieza" href="../salida_v2/png/07-post-redes.png"><img src="../salida_v2/png/07-post-redes.png" alt=""><span>Post para redes</span></a>
+      <a class="pieza" href="../salida_v2/png/08-historia-redes.png"><img src="../salida_v2/png/08-historia-redes.png" alt=""><span>Historia / estado</span></a>
+      <a class="pieza" href="../salida_v2/png/04-valla.png"><img src="../salida_v2/png/04-valla.png" alt=""><span>Valla</span></a>
+      <a class="pieza" href="../salida_v2/png/06-tarjeta.png"><img src="../salida_v2/png/06-tarjeta.png" alt=""><span>Tarjeta</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="display">EL <span class="rojo">2</span> ES CON LOS CAFETEROS</p>
+  <p class="vote">Vota Plancha N.º 2</p>
+  <small>Comité Departamental de Cafeteros del Tolima · Líbano · Casabianca · Villahermosa</small>
+</footer>
+
+</body>
+</html>
