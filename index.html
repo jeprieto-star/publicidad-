@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campaña Plancha N.º 2 · Comprometidos con los Cafeteros</title>
+<style>
+  :root{
+    --verde:#0F4D26; --verde2:#1E7A3D; --cafe:#3A2317; --rojo:#C1272D;
+    --oro:#F2A900; --crema:#FBF4E2; --cremaosc:#F0E2C0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Roboto,'Noto Sans',Arial,sans-serif;background:var(--crema);color:var(--cafe);line-height:1.5}
+  header{background:linear-gradient(135deg,var(--verde),var(--verde2));color:#fff;padding:48px 24px 40px;text-align:center;position:relative;overflow:hidden}
+  .tricolor{height:10px;display:flex}
+  .tricolor i{flex:1}.t1{background:var(--oro)}.t2{background:#0B5BA6}.t3{background:var(--rojo)}
+  header h1{font-size:clamp(28px,5vw,52px);letter-spacing:1px;text-shadow:0 2px 6px rgba(0,0,0,.3)}
+  header h1 .oro{color:#FCC419}
+  header p{font-size:clamp(15px,2.4vw,20px);margin-top:10px;opacity:.95}
+  .sello{display:inline-block;margin-top:18px;background:var(--rojo);border:4px solid #fff;border-radius:50%;
+    width:96px;height:96px;line-height:1;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+  .sello b{display:block;font-size:13px;letter-spacing:1px;margin-top:16px;color:#FCC419}
+  .sello span{display:block;font-size:46px;font-weight:800;color:#fff;margin-top:-2px}
+  .container{max-width:1180px;margin:0 auto;padding:32px 20px 60px}
+  .intro{background:#fff;border-radius:16px;padding:24px 26px;margin:28px 0;box-shadow:0 4px 14px rgba(0,0,0,.07);border-left:8px solid var(--oro)}
+  .intro h2{color:var(--verde);margin-bottom:10px}
+  .intro ul{margin:10px 0 0 18px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:26px}
+  .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.10);display:flex;flex-direction:column;transition:transform .15s}
+  .card:hover{transform:translateY(-4px)}
+  .card .thumb{background:var(--cremaosc);display:flex;align-items:center;justify-content:center;padding:14px}
+  .card .thumb img{max-width:100%;height:auto;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+  .card .body{padding:16px 18px 20px}
+  .card h3{color:var(--verde);font-size:19px;margin-bottom:4px}
+  .card .fmt{font-size:13px;color:#8a6d4b;margin-bottom:12px}
+  .links a{display:inline-block;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:var(--verde2);
+    padding:6px 12px;border-radius:20px;margin:0 6px 6px 0}
+  .links a.pdf{background:var(--rojo)} .links a.svg{background:var(--cafe)}
+  footer{background:var(--cafe);color:#fff;padding:30px 20px;text-align:center;font-size:14px}
+  footer .muni{color:#FCC419;font-weight:700}
+</style>
+</head>
+<body>
+<div class="tricolor"><i class="t1"></i><i class="t2"></i><i class="t3"></i></div>
+<header>
+  <h1>COMPROMETIDOS<br><span class="oro">CON LOS CAFETEROS</span></h1>
+  <p>Plancha N.º 2 · Comité Departamental de Cafeteros del Tolima</p>
+  <p>Líbano · Villahermosa · Casabianca — Norte del Tolima</p>
+  <div class="sello"><b>PLANCHA</b><span>2</span></div>
+</header>
+
+<div class="container">
+  <div class="intro">
+    <h2>Kit publicitario de la campaña</h2>
+    <p>Todas las piezas se generan automáticamente con <b>Python + cairosvg</b>. Cada una está disponible
+       en <b>PNG</b> (alta resolución), <b>PDF</b> (listo para imprenta) y <b>SVG</b> (vectorial, editable y escalable a cualquier tamaño).</p>
+    <ul>
+      <li><b>Para personalizar:</b> edita <code>campana/config.py</code> (nombres, propuestas, municipios) y coloca las fotos reales en <code>assets/</code>.</li>
+      <li><b>Para regenerar todo:</b> ejecuta <code>python generar_campana.py</code>.</li>
+    </ul>
+  </div>
+
+  <div class="grid" id="grid"></div>
+</div>
+
+<footer>
+  <p>COMPROMETIDOS CON LOS CAFETEROS · Por unos cafeteros prósperos</p>
+  <p class="muni">VOTA PLANCHA N.º 2 — Líbano · Villahermosa · Casabianca</p>
+</footer>
+
+<script>
+  const piezas = [
+    ["01-afiche-principal","Afiche principal","Vertical · 50×70 cm aprox."],
+    ["02-afiche-propuestas","Afiche de propuestas","Vertical · 50×70 cm aprox."],
+    ["03-pasacalle","Pasacalle","Horizontal · banner de calle (4:1)"],
+    ["04-valla","Valla / Vaya","Gran formato · 8×3 m aprox. (8:3)"],
+    ["05-volante","Volante","Vertical · media carta / volante"],
+    ["06-tarjeta","Tarjeta de presentación","Horizontal · 9×5 cm"],
+    ["07-post-redes","Post redes sociales","Cuadrado · 1080×1080 px"],
+    ["08-historia-redes","Historia redes sociales","Vertical · 1080×1920 px"],
+  ];
+  const grid = document.getElementById('grid');
+  piezas.forEach(([id,titulo,fmt])=>{
+    grid.insertAdjacentHTML('beforeend', `
+      <div class="card">
+        <div class="thumb"><img src="salida/png/${id}.png" alt="${titulo}" loading="lazy"></div>
+        <div class="body">
+          <h3>${titulo}</h3>
+          <div class="fmt">${fmt}</div>
+          <div class="links">
+            <a href="salida/png/${id}.png" download>PNG</a>
+            <a class="pdf" href="salida/pdf/${id}.pdf" download>PDF</a>
+            <a class="svg" href="salida/svg/${id}.svg" download>SVG</a>
+          </div>
+        </div>
+      </div>`);
+  });
+</script>
+</body>
+</html>

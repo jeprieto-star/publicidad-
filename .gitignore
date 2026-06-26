@@ -1,0 +1,17 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Node (no usado, por si acaso)
+node_modules/
+package-lock.json
+
+# Sistema
+.DS_Store
+Thumbs.db

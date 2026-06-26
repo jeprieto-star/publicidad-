@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1000" height="1400" viewBox="0 0 1000 1400">
+
+  <defs>
+    <linearGradient id="gCielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE9A8"/>
+      <stop offset="0.55" stop-color="#FBF4E2"/>
+      <stop offset="1" stop-color="#F0E2C0"/>
+    </linearGradient>
+    <linearGradient id="gVerde" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3FA34D"/>
+      <stop offset="1" stop-color="#0F4D26"/>
+    </linearGradient>
+    <linearGradient id="gCafe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6F4322"/>
+      <stop offset="1" stop-color="#3A2317"/>
+    </linearGradient>
+    <linearGradient id="gRojo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C1272D"/>
+      <stop offset="1" stop-color="#8E1B1F"/>
+    </linearGradient>
+    <linearGradient id="gOro" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FCC419"/>
+      <stop offset="1" stop-color="#F2A900"/>
+    </linearGradient>
+    <radialGradient id="gCereza" cx="0.35" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#F0625A"/>
+      <stop offset="0.5" stop-color="#C1272D"/>
+      <stop offset="1" stop-color="#8E1B1F"/>
+    </radialGradient>
+    <radialGradient id="gSol" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFF3C4"/>
+      <stop offset="0.6" stop-color="#FCC419"/>
+      <stop offset="1" stop-color="#F2A900"/>
+    </radialGradient>
+    <filter id="sombra" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+    <filter id="sombraSuave" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="1400" fill="url(#gCielo)"/>
+
+    <g>
+      <!-- capa lejana (azulada) -->
+      <path d="M0,1400 L0,1272 L220,1230 L400,1281
+               L620,1238 L820,1295 L1000,1264 L1000,1400 Z"
+            fill="#9FB8A6" opacity="0.55"/>
+      <!-- nevado -->
+      <path d="M550,1238 l 17,31 l -8,-3
+               l 8,10 l -12,0 l -8,-8 Z"
+            fill="#FFFFFF" opacity="0.85"/>
+      <!-- capa media (verde) -->
+      <path d="M0,1400 L0,1324 L300,1278 L550,1332
+               L780,1284 L1000,1329 L1000,1400 Z"
+            fill="#1E7A3D" opacity="0.85"/>
+      <!-- capa cercana (verde oscuro con textura de cultivo) -->
+      <path d="M0,1400 L0,1358 L400,1329 L700,1366
+               L1000,1342 L1000,1400 Z"
+            fill="#0F4D26"/>
+    </g><g transform="translate(70,1420) rotate(-8) scale(0.5,0.5)"><path d="M0,0 C 10,-120 -10,-260 0,-420" fill="none" stroke="#6F4322" stroke-width="14" stroke-linecap="round"/><g transform="translate(6,-70)"><g transform="rotate(58) scale(0.9)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g><g transform="rotate(-58) scale(0.9)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g>
+    <g>
+      <circle cx="-9.0" cy="6" r="9.9" fill="url(#gCereza)"/>
+      <ellipse cx="-12.0" cy="2.5" rx="3.2" ry="2.2" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="-9.0" cy="11.9" r="1.2" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="10.8" cy="4" r="10.8" fill="url(#gCereza)"/>
+      <ellipse cx="7.6" cy="0.2" rx="3.5" ry="2.4" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="10.8" cy="10.5" r="1.3" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="1.8" cy="16" r="9.0" fill="url(#gCereza)"/>
+      <ellipse cx="-0.9" cy="12.8" rx="2.9" ry="2.0" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="1.8" cy="21.4" r="1.1" fill="#3A2317"/>
+    </g></g><g transform="translate(6,-150)"><g transform="rotate(50) scale(1.05)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g><g transform="rotate(-50) scale(1.05)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g>
+    <g>
+      <circle cx="-10.5" cy="6" r="11.55" fill="url(#gCereza)"/>
+      <ellipse cx="-14.0" cy="2.0" rx="3.7" ry="2.5" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="-10.5" cy="12.9" r="1.4" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="12.600000000000001" cy="4" r="12.600000000000001" fill="url(#gCereza)"/>
+      <ellipse cx="8.8" cy="-0.4" rx="4.0" ry="2.8" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="12.600000000000001" cy="11.6" r="1.5" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="2.1" cy="16" r="10.5" fill="url(#gCereza)"/>
+      <ellipse cx="-1.0" cy="12.3" rx="3.4" ry="2.3" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="2.1" cy="22.3" r="1.3" fill="#3A2317"/>
+    </g></g><g transform="translate(6,-235)"><g transform="rotate(54) scale(0.95)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g><g transform="rotate(-54) scale(0.95)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g>
+    <g>
+      <circle cx="-9.5" cy="6" r="10.45" fill="url(#gCereza)"/>
+      <ellipse cx="-12.6" cy="2.3" rx="3.3" ry="2.3" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="-9.5" cy="12.3" r="1.3" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="11.399999999999999" cy="4" r="11.399999999999999" fill="url(#gCereza)"/>
+      <ellipse cx="8.0" cy="0.0" rx="3.6" ry="2.5" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="11.399999999999999" cy="10.8" r="1.4" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="1.9" cy="16" r="9.5" fill="url(#gCereza)"/>
+      <ellipse cx="-1.0" cy="12.7" rx="3.0" ry="2.1" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="1.9" cy="21.7" r="1.1" fill="#3A2317"/>
+    </g></g><g transform="translate(6,-320)"><g transform="rotate(60) scale(0.85)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g><g transform="rotate(-60) scale(0.85)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g>
+    <g>
+      <circle cx="-8.5" cy="6" r="9.35" fill="url(#gCereza)"/>
+      <ellipse cx="-11.3" cy="2.7" rx="3.0" ry="2.1" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="-8.5" cy="11.6" r="1.1" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="10.2" cy="4" r="10.2" fill="url(#gCereza)"/>
+      <ellipse cx="7.1" cy="0.4" rx="3.3" ry="2.2" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="10.2" cy="10.1" r="1.2" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="1.7" cy="16" r="8.5" fill="url(#gCereza)"/>
+      <ellipse cx="-0.8" cy="13.0" rx="2.7" ry="1.9" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="1.7" cy="21.1" r="1.0" fill="#3A2317"/>
+    </g></g><g transform="translate(6,-390)"><g transform="rotate(68) scale(0.7)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g><g transform="rotate(-68) scale(0.7)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g>
+    <g>
+      <circle cx="-7.0" cy="6" r="7.699999999999999" fill="url(#gCereza)"/>
+      <ellipse cx="-9.3" cy="3.3" rx="2.5" ry="1.7" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="-7.0" cy="10.6" r="0.9" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="8.399999999999999" cy="4" r="8.399999999999999" fill="url(#gCereza)"/>
+      <ellipse cx="5.9" cy="1.1" rx="2.7" ry="1.8" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="8.399999999999999" cy="9.0" r="1.0" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="1.4" cy="16" r="7.0" fill="url(#gCereza)"/>
+      <ellipse cx="-0.7" cy="13.6" rx="2.2" ry="1.5" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="1.4" cy="20.2" r="0.8" fill="#3A2317"/>
+    </g></g></g><g transform="translate(930,1420) rotate(8) scale(-0.5,0.5)"><path d="M0,0 C 10,-120 -10,-260 0,-420" fill="none" stroke="#6F4322" stroke-width="14" stroke-linecap="round"/><g transform="translate(6,-70)"><g transform="rotate(58) scale(0.9)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g><g transform="rotate(-58) scale(0.9)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g>
+    <g>
+      <circle cx="-9.0" cy="6" r="9.9" fill="url(#gCereza)"/>
+      <ellipse cx="-12.0" cy="2.5" rx="3.2" ry="2.2" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="-9.0" cy="11.9" r="1.2" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="10.8" cy="4" r="10.8" fill="url(#gCereza)"/>
+      <ellipse cx="7.6" cy="0.2" rx="3.5" ry="2.4" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="10.8" cy="10.5" r="1.3" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="1.8" cy="16" r="9.0" fill="url(#gCereza)"/>
+      <ellipse cx="-0.9" cy="12.8" rx="2.9" ry="2.0" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="1.8" cy="21.4" r="1.1" fill="#3A2317"/>
+    </g></g><g transform="translate(6,-150)"><g transform="rotate(50) scale(1.05)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g><g transform="rotate(-50) scale(1.05)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g>
+    <g>
+      <circle cx="-10.5" cy="6" r="11.55" fill="url(#gCereza)"/>
+      <ellipse cx="-14.0" cy="2.0" rx="3.7" ry="2.5" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="-10.5" cy="12.9" r="1.4" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="12.600000000000001" cy="4" r="12.600000000000001" fill="url(#gCereza)"/>
+      <ellipse cx="8.8" cy="-0.4" rx="4.0" ry="2.8" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="12.600000000000001" cy="11.6" r="1.5" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="2.1" cy="16" r="10.5" fill="url(#gCereza)"/>
+      <ellipse cx="-1.0" cy="12.3" rx="3.4" ry="2.3" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="2.1" cy="22.3" r="1.3" fill="#3A2317"/>
+    </g></g><g transform="translate(6,-235)"><g transform="rotate(54) scale(0.95)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g><g transform="rotate(-54) scale(0.95)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g>
+    <g>
+      <circle cx="-9.5" cy="6" r="10.45" fill="url(#gCereza)"/>
+      <ellipse cx="-12.6" cy="2.3" rx="3.3" ry="2.3" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="-9.5" cy="12.3" r="1.3" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="11.399999999999999" cy="4" r="11.399999999999999" fill="url(#gCereza)"/>
+      <ellipse cx="8.0" cy="0.0" rx="3.6" ry="2.5" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="11.399999999999999" cy="10.8" r="1.4" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="1.9" cy="16" r="9.5" fill="url(#gCereza)"/>
+      <ellipse cx="-1.0" cy="12.7" rx="3.0" ry="2.1" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="1.9" cy="21.7" r="1.1" fill="#3A2317"/>
+    </g></g><g transform="translate(6,-320)"><g transform="rotate(60) scale(0.85)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g><g transform="rotate(-60) scale(0.85)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g>
+    <g>
+      <circle cx="-8.5" cy="6" r="9.35" fill="url(#gCereza)"/>
+      <ellipse cx="-11.3" cy="2.7" rx="3.0" ry="2.1" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="-8.5" cy="11.6" r="1.1" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="10.2" cy="4" r="10.2" fill="url(#gCereza)"/>
+      <ellipse cx="7.1" cy="0.4" rx="3.3" ry="2.2" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="10.2" cy="10.1" r="1.2" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="1.7" cy="16" r="8.5" fill="url(#gCereza)"/>
+      <ellipse cx="-0.8" cy="13.0" rx="2.7" ry="1.9" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="1.7" cy="21.1" r="1.0" fill="#3A2317"/>
+    </g></g><g transform="translate(6,-390)"><g transform="rotate(68) scale(0.7)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g><g transform="rotate(-68) scale(0.7)">
+    <g>
+      <path d="M0,0 C 30.8,-19.8 33.0,-79.2 0,-110.0
+               C -33.0,-79.2 -30.8,-19.8 0,0 Z"
+            fill="url(#gVerde)"/>
+      <path d="M0,-5.5 L0,-101.2" stroke="#0F4D26" stroke-width="2.8" stroke-linecap="round" opacity="0.6"/>
+    </g></g>
+    <g>
+      <circle cx="-7.0" cy="6" r="7.699999999999999" fill="url(#gCereza)"/>
+      <ellipse cx="-9.3" cy="3.3" rx="2.5" ry="1.7" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="-7.0" cy="10.6" r="0.9" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="8.399999999999999" cy="4" r="8.399999999999999" fill="url(#gCereza)"/>
+      <ellipse cx="5.9" cy="1.1" rx="2.7" ry="1.8" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="8.399999999999999" cy="9.0" r="1.0" fill="#3A2317"/>
+    </g>
+    <g>
+      <circle cx="1.4" cy="16" r="7.0" fill="url(#gCereza)"/>
+      <ellipse cx="-0.7" cy="13.6" rx="2.2" ry="1.5" fill="#FFFFFF" opacity="0.45"/>
+      <circle cx="1.4" cy="20.2" r="0.8" fill="#3A2317"/>
+    </g></g></g><rect x="0.0" y="0" width="334.3" height="16" fill="#F2A900"/><rect x="333.3" y="0" width="334.3" height="16" fill="#0B5BA6"/><rect x="666.7" y="0" width="334.3" height="16" fill="#C1272D"/><text x="500.0" y="64" font-family="Noto Sans" font-size="24" font-weight="bold" fill="#6F4322" text-anchor="middle" opacity="1.0" letter-spacing="2" paint-order="stroke" stroke="#6F4322" stroke-width="1.20" stroke-linejoin="round" stroke-linecap="round">COMITÉ DEPARTAMENTAL DE CAFETEROS DEL TOLIMA</text><line x1="240.0" y1="80" x2="760.0" y2="80" stroke="#F2A900" stroke-width="3"/><text x="500.0" y="150" font-family="Noto Sans" font-size="72" font-weight="bold" fill="#0F4D26" text-anchor="middle" opacity="1.0" paint-order="stroke" stroke="#0F4D26" stroke-width="4.32" stroke-linejoin="round" stroke-linecap="round">NUESTRAS PROPUESTAS</text><text x="500.0" y="196" font-family="Noto Sans" font-size="34" font-weight="bold" fill="#C1272D" text-anchor="middle" opacity="1.0" paint-order="stroke" stroke="#C1272D" stroke-width="1.70" stroke-linejoin="round" stroke-linecap="round">COMPROMETIDOS CON LOS CAFETEROS</text><rect x="64" y="236" width="872" height="176" rx="26" fill="#FFFFFF" filter="url(#sombraSuave)"/><rect x="64" y="236" width="14" height="176" rx="7" fill="url(#gRojo)"/><g><circle cx="168" cy="324.0" r="66" fill="url(#gOro)" filter="url(#sombraSuave)"/><path d="M139.0,361.0 C 128.4,324.0 207.6,324.0 194.4,284.4" fill="none" stroke="#3A2317" stroke-width="18.5" stroke-linecap="round"/><path d="M139.0,361.0 C 128.4,324.0 207.6,324.0 194.4,284.4" fill="none" stroke="#FCC419" stroke-width="4.0" stroke-dasharray="10.6 10.6"/></g><text x="270" y="296" font-family="Noto Sans" font-size="40" font-weight="bold" fill="#0F4D26" text-anchor="start" opacity="1.0" paint-order="stroke" stroke="#0F4D26" stroke-width="2.00" stroke-linejoin="round" stroke-linecap="round">Buenas vías</text><text x="270" y="340" font-family="Noto Sans" font-size="29" font-weight="bold" fill="#3A2317" text-anchor="start" opacity="1.0" paint-order="stroke" stroke="#3A2317" stroke-width="0.58" stroke-linejoin="round" stroke-linecap="round">Buenas vías de comunicación para sacar</text><text x="270" y="378" font-family="Noto Sans" font-size="29" font-weight="bold" fill="#3A2317" text-anchor="start" opacity="1.0" paint-order="stroke" stroke="#3A2317" stroke-width="0.58" stroke-linejoin="round" stroke-linecap="round">la cosecha</text><rect x="64" y="424" width="872" height="176" rx="26" fill="#FFFDF6" filter="url(#sombraSuave)"/><rect x="64" y="424" width="14" height="176" rx="7" fill="url(#gRojo)"/><g><circle cx="168" cy="512.0" r="66" fill="url(#gOro)" filter="url(#sombraSuave)"/><path d="M168.0,551.6 L168.0,509.4" stroke="#3A2317" stroke-width="7.9" stroke-linecap="round"/><path d="M168.0,519.9 C 202.3,517.3 199.7,477.7 170.6,480.3 C 175.9,504.1 191.8,506.7 168.0,512.0 Z" fill="#1E7A3D"/><path d="M168.0,514.6 C 133.7,512.0 136.3,472.4 165.4,475.0 C 160.1,498.8 144.2,501.4 168.0,506.7 Z" fill="#3FA34D"/></g><text x="270" y="484" font-family="Noto Sans" font-size="40" font-weight="bold" fill="#0F4D26" text-anchor="start" opacity="1.0" paint-order="stroke" stroke="#0F4D26" stroke-width="2.00" stroke-linejoin="round" stroke-linecap="round">Renovación de café</text><text x="270" y="528" font-family="Noto Sans" font-size="29" font-weight="bold" fill="#3A2317" text-anchor="start" opacity="1.0" paint-order="stroke" stroke="#3A2317" stroke-width="0.58" stroke-linejoin="round" stroke-linecap="round">Buenos incentivos por renovación de café</text><rect x="64" y="612" width="872" height="176" rx="26" fill="#FFFFFF" filter="url(#sombraSuave)"/><rect x="64" y="612" width="14" height="176" rx="7" fill="url(#gRojo)"/><g><circle cx="168" cy="700.0" r="66" fill="url(#gOro)" filter="url(#sombraSuave)"/><path d="M128.4,697.4 L168.0,663.0 L207.6,697.4 Z" fill="#3A2317"/><rect x="136.3" y="697.4" width="63.4" height="39.6" rx="5.3" fill="#3A2317"/><rect x="160.1" y="710.6" width="15.8" height="26.4" fill="#FCC419"/><path d="M197.0,718.5 q 7.9,13.2 0,21.1 q -7.9,-7.9 0,-21.1 Z" fill="#1CA3EC"/></g><text x="270" y="672" font-family="Noto Sans" font-size="40" font-weight="bold" fill="#0F4D26" text-anchor="start" opacity="1.0" paint-order="stroke" stroke="#0F4D26" stroke-width="2.00" stroke-linejoin="round" stroke-linecap="round">Beneficiaderos</text><text x="270" y="716" font-family="Noto Sans" font-size="29" font-weight="bold" fill="#3A2317" text-anchor="start" opacity="1.0" paint-order="stroke" stroke="#3A2317" stroke-width="0.58" stroke-linejoin="round" stroke-linecap="round">Mejoramiento y construcción de</text><text x="270" y="754" font-family="Noto Sans" font-size="29" font-weight="bold" fill="#3A2317" text-anchor="start" opacity="1.0" paint-order="stroke" stroke="#3A2317" stroke-width="0.58" stroke-linejoin="round" stroke-linecap="round">beneficiaderos</text><rect x="64" y="800" width="872" height="176" rx="26" fill="#FFFDF6" filter="url(#sombraSuave)"/><rect x="64" y="800" width="14" height="176" rx="7" fill="url(#gRojo)"/><g><circle cx="168" cy="888.0" r="66" fill="url(#gOro)" filter="url(#sombraSuave)"/><circle cx="168.0" cy="864.2" r="13.2" fill="#3A2317"/><path d="M168.0,880.1 L144.2,925.0 L191.8,925.0 Z" fill="#3A2317"/><path d="M168.0,880.1 L154.8,901.2 L181.2,901.2 Z" fill="#C1272D"/></g><text x="270" y="860" font-family="Noto Sans" font-size="40" font-weight="bold" fill="#0F4D26" text-anchor="start" opacity="1.0" paint-order="stroke" stroke="#0F4D26" stroke-width="2.00" stroke-linejoin="round" stroke-linecap="round">Mujer cafetera</text><text x="270" y="904" font-family="Noto Sans" font-size="29" font-weight="bold" fill="#3A2317" text-anchor="start" opacity="1.0" paint-order="stroke" stroke="#3A2317" stroke-width="0.58" stroke-linejoin="round" stroke-linecap="round">Proyectos productivos para las mujeres</text><text x="270" y="942" font-family="Noto Sans" font-size="29" font-weight="bold" fill="#3A2317" text-anchor="start" opacity="1.0" paint-order="stroke" stroke="#3A2317" stroke-width="0.58" stroke-linejoin="round" stroke-linecap="round">cafeteras</text><rect x="64" y="988" width="872" height="176" rx="26" fill="#FFFFFF" filter="url(#sombraSuave)"/><rect x="64" y="988" width="14" height="176" rx="7" fill="url(#gRojo)"/><g><circle cx="168" cy="1076.0" r="66" fill="url(#gOro)" filter="url(#sombraSuave)"/><path d="M168.0,1036.4 L202.3,1049.6 L202.3,1081.3 C 202.3,1107.7 183.8,1118.2 168.0,1120.9 C 152.2,1118.2 133.7,1107.7 133.7,1081.3 L133.7,1049.6 Z" fill="#3A2317"/><path d="M152.2,1078.6 L164.0,1091.8 L186.5,1060.2" fill="none" stroke="#FCC419" stroke-width="7.9" stroke-linecap="round" stroke-linejoin="round"/></g><text x="270" y="1048" font-family="Noto Sans" font-size="40" font-weight="bold" fill="#0F4D26" text-anchor="start" opacity="1.0" paint-order="stroke" stroke="#0F4D26" stroke-width="2.00" stroke-linejoin="round" stroke-linecap="round">Defensoría</text><text x="270" y="1092" font-family="Noto Sans" font-size="29" font-weight="bold" fill="#3A2317" text-anchor="start" opacity="1.0" paint-order="stroke" stroke="#3A2317" stroke-width="0.58" stroke-linejoin="round" stroke-linecap="round">La defensoría de los cafeteros</text><rect x="250" y="1252" width="710" height="120" rx="26" fill="#FFFFFF" opacity="0.94" filter="url(#sombra)"/>
+    <g filter="url(#sombra)">
+      <circle cx="150" cy="1312" r="80" fill="url(#gRojo)" stroke="#FFFFFF" stroke-width="4.8"/>
+      <circle cx="150" cy="1312" r="68.8" fill="none" stroke="#F2A900" stroke-width="3.2" stroke-dasharray="8.0 5.6"/>
+      <text x="150" y="1280.0" font-family="Noto Sans" font-size="16.8" font-weight="bold" fill="#FCC419" text-anchor="middle" opacity="1.0" letter-spacing="2.4" paint-order="stroke" stroke="#FCC419" stroke-width="1.01" stroke-linejoin="round" stroke-linecap="round">PLANCHA</text>
+      <text x="150" y="1353.6" font-family="Noto Sans" font-size="81.6" font-weight="bold" fill="#FFFFFF" text-anchor="middle" opacity="1.0" paint-order="stroke" stroke="#FFFFFF" stroke-width="4.08" stroke-linejoin="round" stroke-linecap="round">2</text>
+    </g><text x="600" y="1302" font-family="Noto Sans" font-size="50" font-weight="bold" fill="#8E1B1F" text-anchor="middle" opacity="1.0" paint-order="stroke" stroke="#8E1B1F" stroke-width="3.00" stroke-linejoin="round" stroke-linecap="round">VOTA PLANCHA N.º 2</text><text x="600" y="1352" font-family="Noto Sans" font-size="25" font-weight="bold" fill="#0F4D26" text-anchor="middle" opacity="1.0" paint-order="stroke" stroke="#0F4D26" stroke-width="1.00" stroke-linejoin="round" stroke-linecap="round">Líbano  •  Villahermosa  •  Casabianca  —  Norte del Tolima</text>
+</svg>
