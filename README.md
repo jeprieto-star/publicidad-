@@ -97,7 +97,7 @@ publicidad-/
 
 ---
 
-# ☕ PROPUESTA NUEVA (v2) — *Tierra de Café · Norte del Tolima*
+# ☕ PROPUESTA NUEVA (v2) — *Tierra de Café*
 
 Rediseño **completo y desde cero**, con una dirección de arte totalmente
 distinta a la versión anterior:
@@ -106,8 +106,11 @@ distinta a la versión anterior:
   paleta **cereza de café + espresso + crema + ámbar**.
 - **Tipografía de cartel**: Anton (titulares), Oswald (rótulos),
   Fraunces (acentos), Noto Sans (cuerpo).
-- **Fotografía real de la región como protagonista**: la **iglesia de Líbano**,
-  los **cafetales**, la **recolección**, el **grano de café** y el **Nevado**.
+- **Fotografía real del café como protagonista**: los **cafetales**, la
+  **recolección** y el **grano maduro** — incluso de fondo en los retratos,
+  para conectar con quienes siembran café.
+- **Mensaje amplio**: por las familias cafeteras, sin municipios ni zonas
+  específicas de territorio.
 - **Sistema de marca propio**: sello/insignia con el número **2**, grano de
   café estilizado y líneas topográficas de la cordillera.
 - **Sitio web interactivo** para compartir por WhatsApp/redes.

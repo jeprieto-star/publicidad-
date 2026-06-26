@@ -26,7 +26,7 @@ PIEZAS = [
 
 
 def main():
-    print("Generando propuesta NUEVA · Tierra de Café · Norte del Tolima")
+    print("Generando propuesta NUEVA · Tierra de Café")
     for nombre, fn, esc in PIEZAS:
         w, h, cont, fondo, seed = fn()
         svg = R.documento(w, h, cont, fondo, seed)

@@ -146,6 +146,9 @@ def defs(seed=7):
     <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/>
     <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0"/>
   </filter>
+  <filter id="blurBg" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="6"/>
+  </filter>
 </defs>
 """
 
@@ -255,7 +258,11 @@ def sello(cx, cy, r, numero=M.PLANCHA, fondo="url(#gCereza)", aro=None, texto_ar
 # ----------------------------------------------------------------------
 # RETRATO  (foto recortada del candidato sobre disco/panel de marca)
 # ----------------------------------------------------------------------
-def retrato_circular(cx, cy, r, cand, borde=None, fondo="url(#gEspresso)", bw=None):
+def retrato_circular(cx, cy, r, cand, borde=None, fondo="url(#gEspresso)", bw=None,
+                     fondo_img=None, veil=0.42):
+    """Retrato del candidato (recorte) sobre un fondo de CAFETALES —
+    conecta con quienes siembran café. El fondo va desenfocado y con un
+    velo espresso para que la figura resalte."""
     borde = borde or M.AMBAR
     bw = bw if bw is not None else r * 0.07
     cid = _uid("rc")
@@ -266,12 +273,18 @@ def retrato_circular(cx, cy, r, cand, borde=None, fondo="url(#gEspresso)", bw=No
     iw = ih * ratio
     ix = cx - iw / 2
     iy = cy - r * 1.04
+    bg = fondo_img if fondo_img is not None else M.F_CAFETALES
+    bx, by, bd = cx - r, cy - r, 2 * r
     return f"""
 <g filter="url(#sh_card)">
   <circle cx="{cx}" cy="{cy}" r="{r+bw}" fill="{M.HUESO}"/>
   <clipPath id="{cid}"><circle cx="{cx}" cy="{cy}" r="{r}"/></clipPath>
   <g clip-path="url(#{cid})">
     <circle cx="{cx}" cy="{cy}" r="{r}" fill="{fondo}"/>
+    <g filter="url(#blurBg)"><image href="{data_uri(bg)}" x="{bx:.1f}" y="{by:.1f}"
+         width="{bd:.1f}" height="{bd:.1f}" preserveAspectRatio="xMidYMid slice"/></g>
+    <circle cx="{cx}" cy="{cy}" r="{r}" fill="{M.ESPRESSO}" opacity="{veil}"/>
+    <rect x="{bx:.1f}" y="{cy:.1f}" width="{bd:.1f}" height="{r:.1f}" fill="url(#velAbajo)" opacity="0.5"/>
     <image href="{data_uri(ruta)}" x="{ix:.1f}" y="{iy:.1f}" width="{iw:.1f}" height="{ih:.1f}"
            preserveAspectRatio="xMidYMid meet"/>
   </g>

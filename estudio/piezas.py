@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Piezas de la campaña — sistema "Tierra de Café · Norte del Tolima".
+Piezas de la campaña — sistema "Tierra de Café".
 Cada función devuelve (ancho, alto, contenido, fondo, seed).
 """
 from . import marca as M
@@ -16,7 +16,7 @@ def _cabecera(W, h=148):
     s.append(S.franja_granos(20, h-16, W-40, paso=42, r=6, color=M.AMBAR, op=0.20))
     s.append(S.texto(W/2, h*0.40, M.CORPORACION, h*0.165, fill=M.HUESO, font=M.COND,
                      weight="600", spacing=1.4, upper=True))
-    s.append(S.texto(W/2, h*0.74, M.MUNICIPIOS_TXT + "  ·  " + M.REGION, h*0.150,
+    s.append(S.texto(W/2, h*0.74, M.CONEXION, h*0.150,
                      fill=M.AMBAR_CL, font=M.COND, weight="500", spacing=1.6, upper=True))
     return "".join(s)
 
@@ -60,8 +60,8 @@ def afiche_principal():
     s.append(S.franja_granos(220, 1064, 560, paso=46, r=8, color=M.ESPRESSO, op=0.35))
     # CTA
     s.append(S.cta(W/2, 1104, 640, 150))
-    # pie región
-    s.append(S.texto(W/2, 1344, M.MUNICIPIOS_TXT.upper() + "  ·  NORTE DEL TOLIMA",
+    # pie: conexión cafetera
+    s.append(S.texto(W/2, 1344, M.CONEXION.upper(),
                      24, fill=M.ESPRESSO, font=M.COND, weight="600", spacing=2))
     return W, H, "".join(s), "url(#gCrema)", 7
 
@@ -130,7 +130,7 @@ def pasacalle():
                      font=M.COND, weight="500", spacing=3, upper=True))
     s.append(S.texto(cx, 250, M.LEMA_1, 96, fill=M.HUESO, font=M.DISPLAY, spacing=1))
     s.append(S.texto(cx, 338, M.LEMA_2, 78, fill=M.CEREZA_CL, font=M.DISPLAY, spacing=1))
-    s.append(S.texto(cx, 408, M.MUNICIPIOS_TXT + "  ·  " + M.REGION, 28, fill=M.HUESO,
+    s.append(S.texto(cx, 408, M.CONEXION, 28, fill=M.HUESO,
                      font=M.COND, weight="500", spacing=2, upper=True))
     return W, H, "".join(s), "url(#gEspresso)", 5
 
@@ -154,7 +154,7 @@ def valla():
                      anchor="start", sombra=True))
     s.append(S.texto(74, 588, M.PROMESA, 46, fill=M.HUESO, font=M.SERIF, italic=True,
                      anchor="start", sombra=True))
-    s.append(S.texto(74, 700, M.MUNICIPIOS_TXT.upper() + " · NORTE DEL TOLIMA", 34,
+    s.append(S.texto(74, 700, M.CONEXION.upper(), 34,
                      fill=M.AMBAR_CL, font=M.COND, weight="600", spacing=2, anchor="start",
                      sombra=True))
     # derecha: panel espresso con retratos + sello + CTA
@@ -235,10 +235,10 @@ def tarjeta():
     s.append(S.texto(cxd, 348, M.LEMA_2, 42, fill=M.CEREZA_CL, font=M.DISPLAY))
     s.append(S.texto(cxd, 392, M.PROMESA, 24, fill=M.AMBAR_CL, font=M.SERIF, italic=True))
     s.append(S.franja_granos(cxd-150, 430, 300, paso=40, r=7, color=M.AMBAR, op=0.5))
-    s.append(S.texto(cxd, 486, M.MUNICIPIOS_TXT.upper(), 22, fill=M.HUESO, font=M.COND,
-                     weight="600", spacing=1.5))
-    s.append(S.texto(cxd, 520, "NORTE DEL TOLIMA", 20, fill=M.AMBAR_CL, font=M.COND,
-                     weight="500", spacing=3))
+    s.append(S.texto(cxd, 486, M.CONEXION.upper(), 21, fill=M.HUESO, font=M.COND,
+                     weight="600", spacing=1.2))
+    s.append(S.texto(cxd, 520, M.TIERRA.upper(), 20, fill=M.AMBAR_CL, font=M.COND,
+                     weight="500", spacing=4))
     return W, H, "".join(s), "url(#gEspresso)", 6
 
 
@@ -250,7 +250,7 @@ def post_ig():
     s = [S.foto(0, 0, W, H, M.F_CAFETALES, velo=["velArriba", "velAbajo"])]
     s.append(S.texto(W/2, 92, "COMITÉ DE CAFETEROS DEL TOLIMA", 24, fill=M.HUESO,
                      font=M.COND, weight="600", spacing=3, upper=True, sombra=True))
-    s.append(S.texto(W/2, 132, M.MUNICIPIOS_TXT + " · " + M.REGION, 22, fill=M.AMBAR_CL,
+    s.append(S.texto(W/2, 132, M.CONEXION, 22, fill=M.AMBAR_CL,
                      font=M.COND, weight="500", spacing=2, upper=True, sombra=True))
     # retratos
     s.append(S.retrato_circular(370, 470, 158, M.CANDIDATOS[0]))
@@ -274,10 +274,10 @@ def post_ig():
 # ======================================================================
 def historia_ig():
     W, H = 1080, 1920
-    s = [S.foto(0, 0, W, H, M.F_IGLESIA, velo=["velArriba", "velAbajo"])]
+    s = [S.foto(0, 0, W, H, M.F_RECOLECCION, velo=["velArriba", "velAbajo"])]
     s.append(S.texto(W/2, 150, "COMITÉ DE CAFETEROS DEL TOLIMA", 26, fill=M.HUESO,
                      font=M.COND, weight="600", spacing=3, upper=True, sombra=True))
-    s.append(S.texto(W/2, 196, M.MUNICIPIOS_TXT + " · " + M.REGION, 24, fill=M.AMBAR_CL,
+    s.append(S.texto(W/2, 196, M.CONEXION, 24, fill=M.AMBAR_CL,
                      font=M.COND, weight="500", spacing=2, upper=True, sombra=True))
     s.append(S.sello(W/2, 470, 150))
     s.append(S.retrato_circular(330, 880, 168, M.CANDIDATOS[0]))
@@ -311,9 +311,9 @@ def sello_marca():
     s.append(f'<text font-family="{M.COND}" font-weight="600" font-size="39" fill="{M.AMBAR_CL}" '
              f'letter-spacing="2.5"><textPath href="#arcUp" startOffset="50%" text-anchor="middle">'
              f'COMPROMETIDOS CON LOS CAFETEROS</textPath></text>')
-    s.append(f'<text font-family="{M.COND}" font-weight="600" font-size="40" fill="{M.AMBAR_CL}" '
-             f'letter-spacing="6"><textPath href="#arcDn" startOffset="50%" text-anchor="middle">'
-             f'NORTE DEL TOLIMA</textPath></text>')
+    s.append(f'<text font-family="{M.COND}" font-weight="600" font-size="38" fill="{M.AMBAR_CL}" '
+             f'letter-spacing="5"><textPath href="#arcDn" startOffset="50%" text-anchor="middle">'
+             f'FAMILIAS CAFETERAS</textPath></text>')
     s.append(S.texto(cx, cy-150, "PLANCHA", 50, fill=M.HUESO, font=M.COND, weight="600",
                      spacing=10, upper=True))
     s.append(S.grano(cx-178, cy+34, 34, color=M.ESPRESSO, rot=20))

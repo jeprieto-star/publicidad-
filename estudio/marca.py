@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-MARCA — Propuesta NUEVA "Tierra de Café · Norte del Tolima"
-===========================================================
+MARCA — Propuesta NUEVA "Tierra de Café"
+========================================
 Dirección de arte completamente distinta a la versión anterior:
 
   · Sistema cálido y potente (no el verde editorial sobrio anterior).
   · Paleta cereza de café + espresso + crema + ámbar.
   · Tipografía de cartel: Anton (titulares), Oswald (rótulos),
     Fraunces (acentos con carácter), Noto Sans (cuerpo).
-  · La FOTOGRAFÍA REAL de la región es protagonista: la iglesia de
-    Líbano, los cafetales, el Nevado, la recolección y el grano.
+  · La FOTOGRAFÍA REAL del café es protagonista: los cafetales, la
+    recolección, el grano maduro y las manos campesinas.
   · Recurso gráfico de marca: sello con el número 2, grano de café
     estilizado y líneas topográficas de la cordillera.
 
@@ -21,9 +21,12 @@ Todo lo editable de la campaña vive aquí.
 # ----------------------------------------------------------------------
 PLANCHA = "2"
 CORPORACION = "Comité Departamental de Cafeteros del Tolima"
-REGION = "Norte del Tolima"
-MUNICIPIOS = ["Líbano", "Casabianca", "Villahermosa"]
-MUNICIPIOS_TXT = "Líbano · Casabianca · Villahermosa"
+
+# Mensaje de conexión con las familias que siembran café
+# (sin municipios ni zonas específicas de territorio)
+CONEXION = "Por las familias que siembran café"
+CONEXION_CORTA = "Con quienes siembran el café"
+TIERRA = "Tierra de café"
 
 LEMA_1 = "COMPROMETIDOS"
 LEMA_2 = "CON LOS CAFETEROS"
@@ -61,13 +64,11 @@ PROPUESTAS = [
 ]
 
 # ----------------------------------------------------------------------
-# FOTOGRAFÍA REGIONAL (real)
+# FOTOGRAFÍA DEL CAFÉ (real) — protagonista de las piezas
 # ----------------------------------------------------------------------
-F_IGLESIA    = "assets_v2/region/libano-iglesia.jpg"   # iglesia de Líbano (noche)
 F_RECOLECCION= "assets_v2/region/recoleccion.jpg"      # manos cosechando cereza
 F_CAFETALES  = "assets_v2/region/cafetales.jpg"        # laderas de cafetales
 F_CAFE       = "assets_v2/region/cafe.jpg"             # rama con cereza roja
-F_NEVADO     = "assets_v2/region/nevado.jpg"           # Nevado del Ruiz
 
 # ----------------------------------------------------------------------
 # PALETA — cálida, de tierra cafetera
