@@ -65,26 +65,38 @@ F_GRANOS    = "assets/fondos/granos-cafe.png"
 F_TAZA      = "assets/fondos/taza-cafe.jpg"
 
 # ----------------------------------------------------------------------
-# PALETA CAFETERA
+# PALETA — editorial, sobria y profesional
+#   Verde bosque + crema cálido + oro apagado + terracota.
+#   Baja saturación: nada de "carnaval". El color enmarca, no grita.
 # ----------------------------------------------------------------------
-VERDE_OSC   = "#0E431F"
-VERDE       = "#1E7A3D"
-VERDE_CLARO = "#3FA34D"
-CAFE_OSC    = "#2C1A0F"
-CAFE        = "#6F4322"
-CAFE_CLARO  = "#9C6B3F"
-ROJO        = "#C1272D"
-ROJO_OSC    = "#8E1B1F"
-AMARILLO    = "#F2A900"
-AMARILLO_CL = "#FFC42E"
-CREMA       = "#FBF4E2"
-CREMA_OSC   = "#F0E2C0"
+VERDE_OSC   = "#15392A"   # verde bosque profundo (color base de marca)
+VERDE       = "#1F6B47"   # verde medio
+VERDE_CLARO = "#3E8E63"   # verde claro (acentos sutiles)
+VERDE_SALVIA= "#8FA98E"   # verde salvia desaturado (líneas finas)
+CAFE_OSC    = "#2A1B11"   # café casi negro (texto sobre claro)
+CAFE        = "#6B4329"   # café medio
+CAFE_CLARO  = "#A07852"   # café claro
+TERRACOTA   = "#A8472E"   # terracota / ladrillo (sustituye al rojo chillón)
+TERRA_OSC   = "#7E3220"   # terracota oscuro
+ORO         = "#C3922E"   # oro apagado (acento principal)
+ORO_CL      = "#DEB85C"   # oro claro
+CREMA       = "#F6EEDD"   # crema cálido (fondo claro)
+CREMA_OSC   = "#EBDDC2"   # crema más profundo
+HUESO       = "#FCFAF3"   # blanco hueso (paneles claros)
 BLANCO      = "#FFFFFF"
-NEGRO       = "#1A1208"
+NEGRO       = "#211913"   # carbón cálido (texto)
+TINTA       = "#2C2017"   # tinta marrón para cuerpos de texto
 AZUL_FOTO   = "#1CA3EC"   # tono del fondo azul de las fotos de estudio (respaldo)
 
-# Tira tricolor (referencia al poncho / bandera) usada como acento
-TRICOLOR = [AMARILLO, "#0B5BA6", ROJO]  # amarillo, azul, rojo
+# Compatibilidad con nombres antiguos del sistema
+ROJO        = TERRACOTA
+ROJO_OSC    = TERRA_OSC
+AMARILLO    = ORO
+AMARILLO_CL = ORO_CL
+
+# Acento tricolor (poncho/bandera) en tonos APAGADOS, usado solo como
+# regla fina y corta — nunca como bloque dominante.
+TRICOLOR = [ORO, "#2E5A7A", TERRACOTA]  # oro apagado, azul petróleo, terracota
 
 # ----------------------------------------------------------------------
 # TIPOGRAFÍA (única disponible en el entorno)
